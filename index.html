@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      html,
+      body,
+      .wrapper {
+        height: 100%;
+      }
+      .wrapper {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 25% 50% 25%;
+        grid-template-rows: 100%;
+        grid-template-areas: "aside main section";
+      }
+
+      aside {
+        background: rgb(69, 73, 69);
+        grid-area: aside;
+        margin: 10px;
+      }
+      main {
+        grid-area: main;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 33.3% 33.3% 33.3%;
+        grid-template-areas:
+          "header"
+          "middle-wrap "
+          "middle-wrap ";
+      }
+      section {
+        background: red;
+        grid-area: section;
+        margin: 10px;
+      }
+      header {
+        background: green;
+        grid-area: header;
+        margin: 10px;
+      }
+      .middle-left {
+        background: yellow;
+        grid-area: middle-left;
+        margin: 10px;
+      }
+      .middle-right {
+        background: red;
+        grid-area: middle-right;
+        margin: 10px;
+      }
+      .bottom-left {
+        background: red;
+        grid-area: bottom-left;
+        margin: 10px;
+      }
+      .bottom-right {
+        background: yellow;
+        grid-area: bottom-right;
+        margin: 10px;
+      }
+      .middle-wrap {
+        grid-area: middle-wrap;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 50% 50%;
+        grid-template-areas:
+          "middle-left middle-right"
+          "bottom-left bottom-right";
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <aside></aside>
+      <main>
+        <header></header>
+        <div class="middle-wrap">
+          <div class="middle-left"></div>
+          <div class="middle-right"></div>
+          <div class="bottom-left"></div>
+          <div class="bottom-right"></div>
+        </div>
+      </main>
+      <section></section>
+    </div>
+  </body>
+</html>
